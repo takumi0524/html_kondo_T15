@@ -1,0 +1,515 @@
+@charset "utf-8";
+
+html{
+    font-size: 16px;
+    /* ↓htmlではなく、bodyにwidthとmarginを指定すると中央寄せになった */
+    /* max-width: 1200px; */
+}
+
+body{
+    max-width: 1200px;
+    margin: auto;
+    color: #333333;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 16px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/* ---------------------
+header →画像とリストのバランスが悪い。これをどうにかしたい。→多分解決した
+-----------------------*/
+.header{
+    max-width: 1200px;
+    background: #fff;
+}
+
+.header-and-navi{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 121px;
+}
+
+.nav-list{
+    display: flex;
+}
+.nav-item{
+    margin: 50px 50px 50px 0;    
+}
+.nav-item>a{
+    color: #222222;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ---------------------
+hero-image
+-----------------------*/
+.hero-image{
+    position: relative;
+    max-width: 1200px;
+}
+.hero-image__text{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    line-height: 60px;
+}
+.hero-image__text2{
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+/* ---------------------
+about
+-----------------------*/
+.about_visual{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.about_title{
+    padding: 60px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd61a;
+    margin:0 0 0 0 ;
+}
+.about_subtitle{
+    padding: 0 0 60px 0;
+    font-size: 18px;
+    color: #222222;
+}
+.about_sentence{
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 40px;
+}
+.about_sentence2{
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+/* ---------------------
+cource　→
+-----------------------*/
+
+.course-image{
+    display: flex;
+    width: 25%;
+}
+
+.course-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+}
+.course-headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 15px 0;
+    font-size: 16px;
+    color: #222222;
+}
+
+/*画像1*/
+.course-sentence1{
+    display: flex;
+    padding: 45px 0 0 0;
+}
+.course-sentence1>div{
+    width: 50%
+};
+
+.course-text1{
+    width: 50%;
+}
+.course-text1-1{
+    margin: 120px 120px 40px 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.course-text1-2{
+    margin: 40px 120px 120px 50px;
+    font-size: 16px;
+}
+
+/*画像2*/
+.course-sentence2{
+    display: flex;
+}
+.course-sentence2>div{
+    width: 50%
+};
+
+.course-text2{
+    width: 50%;
+}
+.course-text2-1{
+    margin: 120px 120px 40px 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.course-text2-2{
+    margin: 40px 120px 120px 50px;
+    font-size: 16px;
+}
+
+/*画像3*/
+.course-sentence3{
+    display: flex;
+}
+.course-sentence3>div{
+    width: 50%
+};
+
+.course-text3{
+    width: 50%;
+}
+.course-text3-1{
+    margin: 120px 120px 40px 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.course-text3-2{
+    margin: 40px 120px 120px 50px;
+    font-size: 16px;
+}
+/* ---------------------
+news
+-----------------------*/
+.news_visual{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.news_padding{
+    padding: 0 0 60px 0 ;
+}
+
+.news_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd61a;
+    margin:0 0 0 0 ;
+}
+.news_subtitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 60px 0;
+    font-size: 18px;
+    color: #222222;
+}
+
+.news_img{
+    display: flex;
+}
+.news_width1{
+    width: 300px;
+    padding: 0 30px 0 0;
+}
+.news_width2{
+    width: 300px;
+}
+.news_width3{
+    width: 300px;
+    padding: 0 0 0 30px;
+}
+.news-date{
+    padding: 30px 0 24px 0;
+}
+
+.btn{
+    display: block;
+    width: 300px;
+    padding: 21px 0;
+    background-color: #ffd61a;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.btn_padding{
+    padding: 0 0 60px 0;
+}
+
+/* ---------------------
+access
+-----------------------*/
+.access{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+.access_title{
+    padding: 60px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.access_subtitle{
+    padding: 0 0 30px 0;
+    font-size: 18px;
+    color: #222222;
+}
+
+/*ここに地図情報を入れたい*/
+.chizu{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schoolname{
+    display: flex;
+    padding: 16px 0;
+}
+.shozaichi{
+    display: flex;
+    padding: 16px 0;
+}
+.tel{
+    display: flex;
+    padding: 16px 0;
+}
+.fax{
+    display: flex;
+    padding: 16px 0;
+}
+.mail{
+    display: flex;
+    padding: 16px 0 60px 0;
+}
+
+.kaishajouhou{
+    display: flex;
+    line-height: 50px;
+    padding: 0 0 30px 0;
+}
+.sentence_left{
+    padding-left: 50px;
+}
+.sentence_right{
+    padding-left: 50px;
+}
+
+/* ---------------------
+contact
+-----------------------*/
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 0 0 0;
+}
+.contact_title{
+    margin: 0 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.contact_subtitle{
+    margin: 0 0 30px 0;
+    font-size: 18px;
+}
+.contact_sentence1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 24px;
+    padding: 0 0 30px 0;
+}
+.contact_sentence2{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 24px;
+    padding: 0 0 70px 0;
+}
+
+/* 以下フォーム */
+
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 640px;
+    max-height: 603px;
+    margin: 0 0 36px 0;
+    border-top:1px  #bfbfbf solid;
+}
+
+/* タイトル */
+.form-title{
+    width: 223px;
+    padding: 8px 0 8px 16px;
+    text-align: left;
+    justify-content: center;
+    line-height: 18px;
+    border-right: 1px #bfbfbf solid;
+    border-bottom:1px #bfbfbf solid;
+}
+.form-title.kikkake{
+    padding: 8px 0 8px 16px;
+}
+.form-title.check-box{
+    padding: 16px 0 164px 16px;
+}
+.form-title.detail{
+    padding: 16px 0 176px 16px;
+}
+
+/* アイテム */
+.form-item{
+    width: 328px;
+    height: 36px;
+    /* margin: 8px 0 8px 8px; */
+    padding:8px 64px 8px 8px ;
+    /* paddingの左右方向を指定することで、線だけ長くできた。 */
+    /* border-right: 1px #bfbfbf solid;
+    border-bottom:1px #bfbfbf solid; */
+}
+.form-item.border{
+    border-bottom:1px #bfbfbf solid;
+}
+.form-item.kikkake{
+    width: 328px;
+    height: 34px;
+    padding: 0 0 8px 0;
+}
+.kikkake{
+    padding: 8px 64px 8px 8px;
+    border-bottom:1px #bfbfbf solid;
+}
+
+.form-parts{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 36px;
+    /* width: 100%; */
+    /* margin: 8px 0 8px 8px; */
+    border: solid 1px #bfbfbf;
+    border-bottom: solid 1px #bfbfbf;
+    font-size: 16px;
+}
+.form-label{
+    width: 400px;
+    display: block;
+    flex-direction: column;
+    margin: 0 0 8px;
+    line-height: 40px;
+}
+input[type*="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+    border: solid 1px #a0a0a0;
+    vertical-align: -2px;
+}
+input[type*="radio"]:checked{
+    background-color: #a0a0a0;
+}
+.form-item.check-box{
+    border-bottom: solid 1px #bfbfbf;
+    padding: 8px 64px 168px 8px;
+}
+.form-item.detail{
+    border-bottom: solid 1px #bfbfbf;
+    padding: 8px 64px 168px 8px;
+}
+#detail.form-parts{
+    width: 328px;
+    height: 196px;
+}
+
+.btn-submit{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+}
+.btn-submit_padding{
+    padding: 100px 0 140px 0;
+}
+
+/* ---------------------
+footer
+-----------------------*/
+.footer{
+    padding: 24px 0;
+    background-color: #707070;
+}
+.footer .wrapper{
+    position: relative;
+}
+.btn-pagetop{
+    position: absolute;
+    top: -78px;
+    right: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #707070;
+
+}
+
+.icon-up{
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 2.4rem
+}
+.copyrights{
+    color: #fff;
+}

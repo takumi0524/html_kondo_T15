@@ -1,0 +1,437 @@
+@charset "utf-8";
+
+html{
+    font-size: 16px;
+    /* ↓htmlではなく、bodyにwidthとmarginを指定すると中央寄せになった */
+    /* max-width: 1200px; */
+}
+
+body{
+    max-width: 960px;
+    margin: auto;
+    color: #333333;
+    background-color: #f5f5f5;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 16px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* ---------------------
+hero-image
+-----------------------*/
+.hero-image{
+    position: relative;     /*テキストのabsoluteと合わせて使用*/
+    max-width: 960px;
+    align-items: center;
+    justify-content: space-between;
+    animation-name: fadeInAnime1;/*名前*/
+    animation-fill-mode:both;/*アニメーションの最初と最後の状態を保持*/
+    animation-duration:3s;
+    animation-iteration-count:1;/*infiniteを指定すると無限に再生*/
+    animation-timing-function:ease;
+    animation-delay: 0.5s;
+    animation-direction:normal;
+}
+@keyframes fadeInAnime1{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
+.hero-image__text{
+    position: absolute;
+    top: 85%;
+    left: 60%;
+    transform: translate3d(-50%,-50%,0);
+    color: #4682b4;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    line-height: 60px;
+
+    animation-name: fadeInAnime2;/*名前*/
+    animation-fill-mode:both;/*アニメーションの最初と最後の状態を保持*/
+    animation-duration:2s;
+    animation-iteration-count:1;/*infiniteを指定すると無限に再生*/
+    animation-timing-function:ease;
+    animation-delay: 1.0s;
+    animation-direction:normal;
+}
+@keyframes fadeInAnime2{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* ---------------------
+header →画像とリストのバランスが悪い。これをどうにかしたい。→多分解決した
+-----------------------*/
+.header{
+    max-width: 960px;
+    background: #fff;
+}
+
+.header-and-navi{
+    /* display: flex; これがあるとナビリストが中央寄せできなかった*/
+    justify-content: space-between;
+    align-items: center;
+    height: 81px;
+    background-color: #f0f8ff;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-item{
+    margin: 30px 30px 30px 50px;    
+    animation-name:fadeRightAnime;
+    animation-duration:3.0s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+@keyframes fadeRightAnime{
+    from {
+      opacity: 0;
+    transform: translateX(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateX(0);
+    }
+  }
+
+
+.nav-item>a{
+    color: #778899;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ---------------------
+about
+-----------------------*/
+.about_visual{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.about_title{
+    padding: 60px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4682b4;
+    margin:0 0 0 0 ;
+}
+.about_subtitle{
+    padding: 0 0 60px 0;
+    font-size: 18px;
+    color: #222222;
+}
+.about_sentence{
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 40px;
+}
+.about_sentence2{
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+/* ---------------------
+cource　→
+-----------------------*/
+
+.plan-image{
+    display: flex;
+    width: 33.3%;
+}
+
+.plan-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4682b4;
+}
+.plan-headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 0 30px 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: #222222;
+}
+
+/*画像1*/
+.plan-sentence1{
+    display: flex;
+    max-height: 252px;
+}
+
+.plan-sentence1>div{
+    width: 50%
+}
+
+.plan-text1{
+    width: 50%;
+    white-space: nowrap
+}
+.plan-text1-1{
+    margin: 40px 30px 30px 30px;
+    font-size: 24px;
+    color: #4682b4;
+    font-weight: bold;
+}
+.plan-text1-2{
+    margin: 40px 30px 30px 30px;
+    font-size: 16px;
+}
+
+/*画像2*/
+.plan-sentence2{
+    display: flex;
+    max-height: 252px;
+}
+
+.plan-sentence2>div{
+    width: 50%;
+}
+
+.plan-text2{
+    width: 50%;
+    white-space: nowrap
+}
+.plan-text2-1{
+    margin: 40px 30px 30px 30px;
+    font-size: 24px;
+    color: #4682b4;
+    font-weight: bold;
+}
+.plan-text2-2{
+    margin: 30px 30px 30px 30px;
+    font-size: 16px;
+}
+.plan-img2{
+    max-height: 252px;
+}
+
+/*画像3*/
+.plan-sentence3{
+    display: flex;
+    max-height: 252px;
+}
+
+.plan-sentence3>div{
+    width: 50%
+}
+
+.plan-text3{
+    width: 50%;
+    white-space: nowrap
+}
+.plan-text3-1{
+    margin: 40px 30px 30px 30px;
+    font-size: 24px;
+    color: #4682b4;
+    font-weight: bold;
+}
+.plan-text3-2{
+    margin: 30px 30px 30px 30px;
+    font-size: 16px;
+}
+
+/* ---------------------
+contact
+-----------------------*/
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 0 0 0;
+}
+.contact_title{
+    margin: 0 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4682b4;
+}
+.contact_subtitle{
+    margin: 0 0 30px 0;
+    font-size: 18px;
+}
+.contact_sentence1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 24px;
+    padding: 0 0 30px 0;
+}
+.contact_sentence2{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 24px;
+    padding: 0 0 70px 0;
+}
+
+/* 以下フォーム */
+
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 640px;
+    max-height: 603px;
+    margin: 0 0 36px 0;
+    border-top:1px  #bfbfbf solid;
+}
+
+/* タイトル */
+.form-title{
+    width: 223px;
+    padding: 16px 0 8px 16px;
+    text-align: left;
+    justify-content: center;
+    line-height: 18px;
+    color: #4682b4;
+    font-weight: bold;
+    border-right: 1px #bfbfbf solid;
+    border-bottom:1px #bfbfbf solid;
+}
+.form-title.kikkake{
+    padding: 16px 0 8px 16px;
+}
+.form-title.check-box{
+    padding: 16px 0 164px 16px;
+}
+.form-title.detail{
+    padding: 16px 0 176px 16px;
+}
+
+/* アイテム */
+.form-item{
+    width: 328px;
+    height: 36px;
+    /* margin: 8px 0 8px 8px; */
+    padding:8px 64px 8px 8px ;
+    /* paddingの左右方向を指定することで、線だけ長くできた。 */
+    /* border-right: 1px #bfbfbf solid;
+    border-bottom:1px #bfbfbf solid; */
+}
+.form-item.border{
+    border-bottom:1px #bfbfbf solid;
+}
+.form-item.kikkake{
+    width: 328px;
+    height: 34px;
+    padding: 0 0 8px 0;
+}
+.kikkake{
+    padding: 8px 64px 8px 8px;
+    border-bottom:1px #bfbfbf solid;
+}
+
+.form-parts{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 36px;
+    border: solid 1px #bfbfbf;
+    border-bottom: solid 1px #bfbfbf;
+    font-size: 16px;
+}
+.form-label{
+    width: 400px;
+    display: block;
+    flex-direction: column;
+    margin: 0 0 8px;
+    line-height: 40px;
+}
+.form-item.detail{
+    padding: 8px 64px 166px 8px;
+    border-bottom:1px #bfbfbf solid;
+}
+
+.btn{
+    display: block;
+    width: 200px;
+    padding: 21px 0;
+    background-color: #b5b047;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.btn-submit{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+}
+.btn-submit_padding{
+    padding: 0 0 140px 0;
+}
+
+/* ---------------------
+footer
+-----------------------*/
+.footer{
+    padding: 24px 0;
+    background-color: #707070;
+}
+.footer .wrapper{
+    position: relative;
+}
+.btn-pagetop{
+    position: absolute;
+    top: -78px;
+    right: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #707070;
+}
+
+.icon-up{
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 2.4rem
+}
+.copyrights{
+    color: #fff;
+}
